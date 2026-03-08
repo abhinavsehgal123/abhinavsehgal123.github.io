@@ -326,6 +326,39 @@ nav {
     color: var(--color-text);
 }
 
+/* ── Screenshots ── */
+.case-screenshots {
+    margin-bottom: 28px;
+}
+
+.case-screenshots h4 {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+}
+
+.screenshot-grid {
+    display: grid;
+    gap: 16px;
+}
+
+.screenshot {
+    margin: 0;
+}
+
+.screenshot img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+}
+
+.screenshot figcaption {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    margin-top: 8px;
+    text-align: center;
+}
+
 .case-tech-stack h4 {
     font-size: 0.8rem;
     text-transform: uppercase;
