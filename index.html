@@ -194,9 +194,59 @@
                 </div>
             </article>
 
-            <div class="more-projects">
-                <p>More case studies coming soon.</p>
-            </div>
+            <article class="case-study" style="margin-top: 32px;">
+                <div class="case-study-header">
+                    <span class="case-label">Case Study</span>
+                    <h3>API Health Monitor</h3>
+                </div>
+                <div class="case-study-body">
+                    <div class="case-study-text">
+                        <p class="case-summary">An async health monitoring system that polls multiple API endpoints concurrently, tracks uptime and latency percentiles, detects outages with smart alerting, and displays everything through a real-time dashboard.</p>
+
+                        <div class="case-details">
+                            <div class="case-detail">
+                                <h4>The Problem</h4>
+                                <p>Teams relying on third-party APIs need visibility into availability and performance. Manual checks don't scale, and existing tools are expensive or bloated for small-to-mid scale use cases.</p>
+                            </div>
+                            <div class="case-detail">
+                                <h4>What I Built</h4>
+                                <ul>
+                                    <li><strong>Async health checker</strong> — concurrent polling via httpx with configurable intervals, timeouts, and expected status codes</li>
+                                    <li><strong>Uptime tracking</strong> — per-endpoint success rate, avg/p95 latency, consecutive failure detection</li>
+                                    <li><strong>Smart alerting</strong> — status transition detection (healthy &rarr; degraded &rarr; down), cooldown to prevent alert fatigue, Slack/Discord webhook dispatch</li>
+                                    <li><strong>SQLite storage</strong> — WAL mode for concurrent reads, indexed for fast dashboard queries</li>
+                                    <li><strong>Live dashboard</strong> — Streamlit + Plotly with uptime bars, latency time series, success rate heatmaps, and alert history</li>
+                                    <li><strong>YAML config</strong> — add or remove endpoints without code changes</li>
+                                </ul>
+                            </div>
+                            <div class="case-detail">
+                                <h4>Results &amp; Quality</h4>
+                                <ul>
+                                    <li>35 automated tests (models, storage, checker, alerter)</li>
+                                    <li>Strict mypy, ruff linting</li>
+                                    <li>Clean architecture — checker, storage, alerter as independent modules</li>
+                                    <li>Demo seeder generates 7 days of realistic data with simulated outages</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-tech-stack">
+                        <h4>Built With</h4>
+                        <div class="case-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">asyncio</span>
+                            <span class="tag">httpx</span>
+                            <span class="tag">Pydantic</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">Plotly</span>
+                            <span class="tag">pytest</span>
+                            <span class="tag">respx</span>
+                        </div>
+                        <a href="https://github.com/abhinavsehgal123/api-health-monitor" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top: 16px; display: inline-block;">View on GitHub</a>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 
